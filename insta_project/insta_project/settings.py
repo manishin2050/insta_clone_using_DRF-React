@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-z#uq=xohp1q!m@9rpot2k20o0ub*=um1vouuxiu1()4vq5648(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'insta_app'
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
