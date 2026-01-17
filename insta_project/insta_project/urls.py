@@ -1,5 +1,5 @@
 """
-URL configuration for insta_project project.
+
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -25,8 +25,6 @@ router.register(r"users", views.UserViewSet)
 router.register(r"groups", views.GroupViewSet)
 # router.register(r"admin",admin.site.urls)
 
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path("", include(router.urls)),
     path("admin/", admin.site.urls ),
